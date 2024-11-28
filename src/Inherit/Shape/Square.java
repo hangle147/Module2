@@ -1,6 +1,8 @@
 package Inherit.Shape;
 
-public class Square extends Rectangle{
+import Abstract_Class_Interface.Resizeable.Resizeable;
+
+public class Square extends Rectangle {
     public Square() {}
 
     public Square(double side) {
@@ -31,9 +33,13 @@ public class Square extends Rectangle{
     }
 
     @Override
+    public String howToColor() {
+        return "Color all four sides " + getColor();
+    }
+
+    @Override
     public String toString() {
         return "\nA Square with side = " + getSide()
-                + ", which is a subclass of " + super.toString()
                 + "\nThe area: " + getArea()
                 + "\nThe Perimeter: " + getPerimeter();
     }

@@ -1,6 +1,10 @@
 package Inherit.Shape;
 
-public class Circle extends Shape{
+import Abstract_Class_Interface.Colorable.Colorable;
+import Abstract_Class_Interface.Resizeable.Resizeable;
+
+public class Circle extends Shape
+        implements Resizeable, Colorable {
     private double radius = 1.0;
 
     public Circle() {}
@@ -28,6 +32,16 @@ public class Circle extends Shape{
 
     public double getPerimeter() {
         return 2 * Math.PI * radius;
+    }
+
+    @Override
+    public void resize(double percent) {
+        radius += radius * (percent / 100);
+    }
+
+    @Override
+    public String howToColor() {
+        return "Color all four sides " + getColor();
     }
 
     @Override
