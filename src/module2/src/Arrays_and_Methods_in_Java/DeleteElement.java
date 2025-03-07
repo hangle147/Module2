@@ -19,11 +19,11 @@ public class DeleteElement {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter array length: ");
+        System.out.print("Nhập độ da mảng: ");
         int length = sc.nextInt();
 
         int[] array = new int[length];
-        System.out.println("Enter array: ");
+        System.out.println("Nhập mảng: ");
         for (int i = 0; i < length; i++) {
             array[i] = sc.nextInt();
         }
@@ -32,7 +32,7 @@ public class DeleteElement {
         int index = sc.nextInt();
 
         System.out.print("Array that has performed the deletion of element " + index + ": ");
-
+        deleteElement(array, index);
 
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
